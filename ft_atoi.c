@@ -6,21 +6,22 @@
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 16:26:26 by bdesmet           #+#    #+#             */
-/*   Updated: 2020/01/23 17:09:55 by bdesmet          ###   ########.fr       */
+/*   Updated: 2020/02/04 20:07:36 by bdesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
 	int i;
 	unsigned long r;
 	int s;
 
 	i = 0;
-	s = 1;
 	r = 0;
+	s = 1;
+
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
 			str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
 		i++;

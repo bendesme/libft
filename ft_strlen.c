@@ -6,13 +6,13 @@
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 14:50:44 by bdesmet           #+#    #+#             */
-/*   Updated: 2020/01/23 17:21:01 by bdesmet          ###   ########.fr       */
+/*   Updated: 2020/02/04 20:10:57 by bdesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	int i;
 
