@@ -6,13 +6,13 @@
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:49:24 by bdesmet           #+#    #+#             */
-/*   Updated: 2020/02/04 19:43:50 by bdesmet          ###   ########.fr       */
+/*   Updated: 2021/04/14 14:25:33 by bdesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *memset(void *s, int c, size_t n)
+void	*memset(void *s, int c, size_t n)
 {
 
 }

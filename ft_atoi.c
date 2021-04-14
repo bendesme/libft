@@ -1,44 +1,28 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/23 16:26:26 by bdesmet           #+#    #+#             */
-/*   Updated: 2020/02/04 20:07:36 by bdesmet          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stddef.h>
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int i;
-	unsigned long r;
-	int s;
+	int				i;
+	unsigned long	r;
+	int				s;
 
 	i = 0;
 	r = 0;
 	s = 1;
-
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i]
+		 == '\r' || str[i] == '\v' || str[i] == '\f')
 		i++;
-	while (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')	
+		if (str[i++] == '-')
 			s = s * -1;
-		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		r = r * 10 + (str[i] - 48);
+		r = s * r * 10 + (str[i] - 48);
 		i++;
+		if (r * s < 0 && s == 1)
+		return (-1)
+		if (r * s < 0 && s != 1)
+		return (0)	
 	}
-	if (r > 9223372036854775807 && s == 1)
-		return (-1);
-	if (r > 9223372036854775807 && s == -1)
-		return (0);
-	return ((int)r * s);
+	return ((int)r);
 }

@@ -1,25 +1,17 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/23 17:39:54 by bdesmet           #+#    #+#             */
-/*   Updated: 2020/01/23 17:54:19 by bdesmet          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const chqr *s, int c)
 {
-	int a;
+	int	l;
 
-	a = 0;
-	while (s[a])
+	l = 0;
+	while (s[l])
+		l++;
+	while (l >= 0)
 	{
-		if (s[a] == c)
-			return (s[a]);
-		a++;
+		if (s[l] == c)
+			return (s[l]);
+		l++;
 	}
-	return ('0');
+	if (!c)
+		return (s[l]);
+	return (0);
 }

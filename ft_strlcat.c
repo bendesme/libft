@@ -6,7 +6,7 @@
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 15:52:54 by bdesmet           #+#    #+#             */
-/*   Updated: 2020/02/04 20:10:36 by bdesmet          ###   ########.fr       */
+/*   Updated: 2021/04/14 14:19:53 by bdesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	size_t a;
-	size_t b;
-	size_t c;
+	size_t	a;
+	size_t	b;
+	size_t	c;
 
 	b = 0;
 	a = 0;

@@ -6,7 +6,7 @@
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 16:12:56 by bdesmet           #+#    #+#             */
-/*   Updated: 2020/01/23 17:33:40 by bdesmet          ###   ########.fr       */
+/*   Updated: 2021/04/14 14:20:27 by bdesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 unsigned int	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t a;
-	size_t b;
+	size_t	a;
+	size_t	b;
 
 	a = 0;
 	b = 0;
