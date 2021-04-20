@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/20 15:49:24 by bdesmet           #+#    #+#             */
-/*   Updated: 2021/04/14 14:25:33 by bdesmet          ###   ########.fr       */
+/*   Created: 2021/04/20 17:53:56 by bdesmet           #+#    #+#             */
+/*   Updated: 2021/04/20 17:54:01 by bdesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*memset(void *s, int c, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-
+	write(fd, s, ft_strlen(s));
 }
