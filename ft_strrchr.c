@@ -1,19 +1,20 @@
 #include "libft.h"
 
-char	*ft_strrchr(const chqr *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	l;
 
 	l = 0;
 	while (s[l])
 		l++;
+
+	if (!c)
+		return ((char *)&s[l]);
 	while (l >= 0)
 	{
 		if (s[l] == c)
-			return (s[l]);
-		l++;
+			return ((char *)&s[l]);
+		l--;
 	}
-	if (!c)
-		return (s[l]);
 	return (0);
 }

@@ -19,15 +19,17 @@ unsigned int	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	a = 0;
 	b = 0;
-	while (b != '\0')
+	if (!src || !dst)
+		return (0);
+	while (src[b])
 		b++;
 	if (size == 0)
 		return (b);
-	while (a + 1 < size && src[a] != '\0')
+	while (a + 1 < size && src[a])
 	{
 		dst[a] = src[a];
 		a++;
 	}
 	dst[a] = '\0';
-	return (a);
+	return (b);
 }

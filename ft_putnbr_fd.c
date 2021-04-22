@@ -6,7 +6,7 @@ void	petit_putnbr(int nb, int fd)
 
 	if (nb < 0)
 	{
-		write(fd, "-", 1)
+		write(fd, "-", 1);
 		nb = -nb;
 	}
 	c = nb + '0';

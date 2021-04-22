@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	a;
 
@@ -20,8 +20,10 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[a])
 	{
 		if (s[a] == c)
-			return (s[a]);
+			return ((char *)&s[a]);
 		a++;
 	}
-	return ('0');
+	if (!c)
+		return ((char *)&s[a]);
+	return (0);
 }

@@ -18,6 +18,13 @@ int	csize(long nb)
 	return (size + 1);
 }
 
+//static int	if2(int i, char *str)
+//{
+//	i++;
+//	str[i] = '-';
+//	return (i);
+//}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -35,6 +42,7 @@ char	*ft_itoa(int n)
 	str[i++] = '-';
 	nb *= -1;
 	}
+//		nb = nb * -1 * if2(i, str);
 	printf("%d\n%c\n", i, str[i]);
 	div = 1;
 	while (nb / div > 9)
@@ -52,7 +60,7 @@ char	*ft_itoa(int n)
 int	main()
 {
 	int	i;
-
+	
 	i = -1234;
 
 	ft_itoa(i);

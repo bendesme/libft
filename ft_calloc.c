@@ -9,7 +9,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!a)
 		return (0);
 	i = 0;
-	while (i < count * size)
+	while (i < nmemb * size)
 	{
 		a[i] = 0;
 		i++;
