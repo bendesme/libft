@@ -7,14 +7,13 @@ char	*ft_strrchr(const char *s, int c)
 	l = 0;
 	while (s[l])
 		l++;
-
-	if (!c)
+	if ((char)c == 0)
 		return ((char *)&s[l]);
 	while (l >= 0)
 	{
-		if (s[l] == c)
+		if (s[l] == (char)c)
 			return ((char *)&s[l]);
 		l--;
 	}
-	return (0);
+	return (NULL);
 }

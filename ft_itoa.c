@@ -31,11 +31,9 @@ char	*ft_itoa(int n)
 		return (0);
 	i = 0;
 	if (nb < 0)
-	{
-	str[i++] = '-';
-	nb *= -1;
-	}
-	printf("%d\n%c\n", i, str[i]);
+		str[i++] = '-';
+	if (nb < 0)
+		nb *= -1;
 	div = 1;
 	while (nb / div > 9)
 		div *= 10;
@@ -47,13 +45,4 @@ char	*ft_itoa(int n)
 	}
 	str[i] = '\0';
 	return (str);
-}
-
-int	main()
-{
-	int	i;
-
-	i = -1234;
-
-	ft_itoa(i);
 }

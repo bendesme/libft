@@ -1,15 +1,15 @@
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int	i;
+	int		i;
 	long	r;
-	int	s;
+	int		s;
 
 	i = 0;
 	r = 0;
 	s = 1;
-	while (str[i] && (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))) 
+	while (str[i] && (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')

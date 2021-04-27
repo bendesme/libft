@@ -6,7 +6,7 @@
 /*   By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:39:54 by bdesmet           #+#    #+#             */
-/*   Updated: 2021/04/15 18:47:15 by bdesmet          ###   ########.fr       */
+/*   Updated: 2021/04/27 17:51:12 by bdesmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	a = 0;
 	while (s[a])
 	{
-		if (s[a] == c)
+		if (s[a] == (char)c)
 			return ((char *)&s[a]);
 		a++;
 	}
-	if (!c)
+	if ((char)c == 0)
 		return ((char *)&s[a]);
 	return (0);
 }

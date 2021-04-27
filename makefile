@@ -6,7 +6,7 @@
 #    By: bdesmet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/04 18:32:28 by bdesmet           #+#    #+#              #
-#    Updated: 2021/04/20 19:51:52 by bdesmet          ###   ########.fr        #
+#    Updated: 2021/04/27 18:00:12 by bdesmet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC=ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c\
 
 OBJ=$(SRC:.c=.o)
 $(NAME):
-	$(CC) $(CFLAGS) -c $(SRC) libft.h
+	$(CC) $(CFLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 .PHONY: clean fclean
@@ -37,5 +37,4 @@ clean:
 fclean: clean 
 	$(RM) $(NAME)
 re: fclean all
-
 
